@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="5">
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -11,6 +12,9 @@
     android:textSize="20sp"
     android:layout_gravity="center"
     android:layout_marginTop="50dp"
+    android:textColor="@color/black"
+    android:layout_weight="1"
+    android:layout_marginBottom="15sp"
     android:fontFamily="sans-serif-black">
 </TextView>
     <LinearLayout
@@ -18,46 +22,215 @@
         android:layout_height="match_parent"
         android:id="@+id/ILayout"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:weightSum="5">
 
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:weightSum="5">
         <EditText
             android:id="@+id/p1"
             android:layout_width="80sp"
             android:layout_height="80sp"
             android:layout_weight="1"
-            android:inputType="number"></EditText>
-
+            android:inputType="number"
+            android:textSize="40sp">
+        </EditText>
         <ImageView
             android:layout_weight="1"
-            android:layout_width="80sp"
-            android:layout_height="80sp"
+            android:layout_marginTop="20dp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
             android:src="@drawable/p"
-            android:textAlignment="center">
+            >
         </ImageView>
         <EditText
             android:layout_weight="1"
             android:layout_width="80sp"
             android:layout_height="80sp"
             android:id="@+id/p2"
+            android:textSize="40sp"
             android:inputType="number">
-
         </EditText>
-        <ImageView
+        <Button
+            android:layout_marginTop="-10dp"
             android:layout_weight="1"
             android:layout_width="80sp"
             android:layout_height="80sp"
-            android:src="@drawable/e">
+            android:text="Sum"
+            android:id="@+id/sum"
+            android:background="@color/white"
+            >
+        </Button>
+        <TextView
+            android:layout_marginTop="-12dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:id="@+id/result"
+            android:textAlignment="center"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/SLayout"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+
+        android:padding="10dp"
+        android:weightSum="5">
+        <EditText
+            android:id="@+id/m1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="40sp">
+        </EditText>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/mi">
         </ImageView>
-
-
         <EditText
             android:layout_weight="1"
             android:layout_width="80sp"
             android:layout_height="80sp"
-            android:id="@+id/result">
+            android:id="@+id/m2"
+            android:textSize="40sp"
+            android:inputType="number">
         </EditText>
+        <Button
+            android:layout_marginTop="-10dp"
+            android:layout_weight="1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:text="Minus"
+            android:id="@+id/minus"
+            android:background="@color/white"
+            >
+        </Button>
+        <TextView
+            android:layout_marginTop="-12dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:id="@+id/mresult"
+            android:textAlignment="center"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/TLayout"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+
+        android:padding="10dp"
+        android:weightSum="5">
+        <EditText
+            android:id="@+id/multi1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="40sp">
+        </EditText>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/mu"
+            >
+        </ImageView>
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:id="@+id/multi2"
+            android:textSize="40sp"
+            android:inputType="number">
+        </EditText>
+        <Button
+            android:layout_marginTop="-10dp"
+            android:layout_weight="1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:text="Multiply"
+            android:id="@+id/multi"
+            android:background="@color/white"
+            >
+        </Button>
+        <TextView
+            android:layout_marginTop="-12dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:id="@+id/multiresult"
+            android:textAlignment="center"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FLayout"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+
+        android:padding="10dp"
+        android:weightSum="5">
+        <EditText
+            android:id="@+id/d1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="40sp">
+        </EditText>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/d"
+            >
+        </ImageView>
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:id="@+id/d2"
+            android:textSize="40sp"
+            android:inputType="number">
+        </EditText>
+        <Button
+            android:layout_marginTop="-10dp"
+            android:layout_weight="1"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:text="Divide"
+            android:id="@+id/divide"
+            android:background="@color/white"
+            >
+        </Button>
+        <TextView
+            android:layout_marginTop="-12dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:id="@+id/dresult"
+            android:textAlignment="center"
+            android:textColor="@color/black">
+        </TextView>
     </LinearLayout>
 
 
